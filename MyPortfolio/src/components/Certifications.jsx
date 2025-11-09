@@ -22,15 +22,18 @@ export const Certifications = () => {
                 <div className="flex items-start justify-between gap-4 mb-3">
                   <div className="flex-1">
                     <h3 className="text-white text-lg font-medium mb-1">{cert.title}</h3>
-                    <p className="text-[#ffdb70] text-sm">{cert.issuer}</p>
                   </div>
                   <Award size={24} className="text-[#ffdb70] flex-shrink-0" />
                 </div>
-                <p className="text-[#d6d6d6] text-sm mb-4">{cert.date}</p>
+                <div className="flex items-start justify-between gap-4  ">
+                                      <p className="text-[#ffdb70] text-sm">{cert.issuer}</p>
+
+                  <p className="text-[#d6d6d6] text-sm mb-4">{cert.date}</p>
                 <a href={cert.credentialUrl} className="inline-flex items-center gap-2 text-[#ffdb70] text-sm hover:text-[#f5c842] transition-colors">
                   View Credential
                   <ExternalLink size={16} />
                 </a>
+                </div>
               </div>
             </div>
           </li>
