@@ -3,7 +3,7 @@ import {Sidebar} from './components/Sidebar';
 import {Navbar} from './components/Navbar';
 import {About} from './components/About';
 import {Resume} from './components/Resume';
-// import Portfolio from './components/Portfolio';
+import {Portfolio} from './components/Portfolio';
 
 const App = () => {
   const [activePage, setActivePage] = useState('about');
@@ -17,7 +17,7 @@ const App = () => {
 
         {activePage === 'about' && <About />}
         {activePage === 'resume' && <Resume />}
-        {/* {activePage === 'portfolio' && <Portfolio />}  */}
+        {activePage === 'portfolio' && <Portfolio />} 
         {/* Add Certifications and Contact later*/}
       </main>
     </div>
