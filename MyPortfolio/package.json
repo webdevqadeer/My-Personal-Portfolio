@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "lucide-react": "^0.553.0",
     "preact": "^10.27.2"
   },
   "devDependencies": {
