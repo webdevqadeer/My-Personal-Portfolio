@@ -4,6 +4,7 @@ import {Navbar} from './components/Navbar';
 import {About} from './components/About';
 import {Resume} from './components/Resume';
 import {Portfolio} from './components/Portfolio';
+import {Certifications} from './components/Certifications';
 
 const App = () => {
   const [activePage, setActivePage] = useState('about');
@@ -18,7 +19,7 @@ const App = () => {
         {activePage === 'about' && <About />}
         {activePage === 'resume' && <Resume />}
         {activePage === 'portfolio' && <Portfolio />} 
-        {/* Add Certifications and Contact later*/}
+        {activePage === 'certifications' && <Certifications />} 
       </main>
     </div>
   );
