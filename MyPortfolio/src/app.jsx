@@ -2,7 +2,7 @@ import  React , {useState } from "react";
 import {Sidebar} from './components/Sidebar';
 import {Navbar} from './components/Navbar';
 import {About} from './components/About';
-// import Resume from './components/Resume';
+import {Resume} from './components/Resume';
 // import Portfolio from './components/Portfolio';
 
 const App = () => {
@@ -16,8 +16,8 @@ const App = () => {
         <Navbar activePage={activePage} setActivePage={setActivePage} />
 
         {activePage === 'about' && <About />}
-        {/* {activePage === 'resume' && <Resume />}
-        {activePage === 'portfolio' && <Portfolio />}  */}
+        {activePage === 'resume' && <Resume />}
+        {/* {activePage === 'portfolio' && <Portfolio />}  */}
         {/* Add Certifications and Contact later*/}
       </main>
     </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Layers, Briefcase, Mail, User, Code, HeartHandshake, Star, X } from 'lucide-react';
+import { Layers, Briefcase, Mail, User, Code, HeartHandshake, Star,BookOpen, X } from 'lucide-react';
 import portfolioData from "../Data/portfolioData";
 
 export const About = () => {
