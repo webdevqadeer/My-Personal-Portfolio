@@ -16,7 +16,7 @@ export const Sidebar = ({ isActive, toggleSidebar}) => {
 
   return (
     <aside
-      className={`bg-[#1e1e1f] border border-[#383838] rounded-3xl p-6 shadow-[0_0_30px_rgba(0,0,0,0.5)] mb-4 lg:mb-0 lg:sticky lg:top-16 transition-all duration-500 ${
+      className={`bg-[#1e1e1f] border border-[#383838] rounded-3xl p-6 shadow-[0_0_30px_rgba(0,0,0,0.5)] mb-4 lg:mb-0 lg:sticky lg:top-6 transition-all duration-500 ${
         isActive ? "max-h-[800px]" : "max-h-28"
       } overflow-hidden lg:max-h-max`}
     >
