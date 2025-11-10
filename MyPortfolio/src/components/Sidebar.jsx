@@ -10,7 +10,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-export const portfolioData = {
+const portfolioData = {
   personalInfo: {
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Abdul",
     name: "Abdul Qadeer",
@@ -27,7 +27,7 @@ export const portfolioData = {
   }
 };
 
-const Sidebar = ({ isActive, toggleSidebar }) => {
+export const Sidebar = ({ isActive, toggleSidebar }) => {
   const { personalInfo, socialLinks } = portfolioData;
 
   return (
@@ -37,20 +37,8 @@ const Sidebar = ({ isActive, toggleSidebar }) => {
       } overflow-hidden lg:max-h-max`}
     >
       {/* Mobile View - Horizontal Layout */}
-      <div className="lg:hidden p-4 relative">
-        <button
-          onClick={toggleSidebar}
-          className="absolute top-0 right-0 bg-[#2b2b2c] text-[#ffdb70] w-10 h-10 rounded-lg flex items-center justify-center hover:bg-[#3a3a3a] transition-colors"
-        >
-          <ChevronDown
-            size={18}
-            className={`transition-transform ${
-              isActive ? "rotate-180" : ""
-            }`}
-          />
-        </button>
-
-        <div className="flex items-center justify-center gap-2 pr-2">
+      <div className="lg:hidden p-6">
+        <div className="flex items-center gap-4">
           <figure className="bg-gradient-to-br from-[#404040] to-[#303030] rounded-3xl overflow-hidden w-20 h-20 flex-shrink-0 shadow-inner">
             <img
               src={personalInfo.avatar}
@@ -59,14 +47,26 @@ const Sidebar = ({ isActive, toggleSidebar }) => {
             />
           </figure>
 
-          <div className="flex-1 text-left ">
+          <div className="flex-1 text-left">
             <h1 className="text-white text-xl font-semibold mb-1">
               {personalInfo.name}
             </h1>
-            <p className="bg-[#2b2b2c] text-white text-xs px-2 py-1.5 rounded-lg font-medium shadow-md inline-block ">
+            <p className="bg-[#2b2b2c] text-white text-xs px-3 py-1.5 rounded-lg font-medium shadow-md inline-block">
               {personalInfo.title}
             </p>
           </div>
+
+          <button
+            onClick={toggleSidebar}
+            className="bg-[#2b2b2c] text-[#ffdb70] w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 hover:bg-[#3a3a3a] transition-colors"
+          >
+            <ChevronDown
+              size={18}
+              className={`transition-transform ${
+                isActive ? "rotate-180" : ""
+              }`}
+            />
+          </button>
         </div>
 
         {/* Contact Info Section - Mobile */}
@@ -290,3 +290,19 @@ const Sidebar = ({ isActive, toggleSidebar }) => {
     </aside>
   );
 };
+
+export default function App() {
+  const [sidebarActive, setSidebarActive] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-[#121212] text-white flex flex-col lg:flex-row gap-6 p-6">
+      <Sidebar isActive={sidebarActive} toggleSidebar={() => setSidebarActive(!sidebarActive)} />
+      <main className="flex-1 bg-[#1e1e1f] rounded-3xl p-6 md:p-12 shadow-2xl relative max-w-7xl mx-auto w-full">
+        <div className="text-white">
+          <h2 className="text-2xl font-bold mb-4">Main Content</h2>
+          <p className="text-gray-400">Your content goes here...</p>
+        </div>
+      </main>
+    </div>
+  );
+}

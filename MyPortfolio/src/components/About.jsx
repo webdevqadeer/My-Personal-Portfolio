@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
 
-export const portfolioData = {
+const portfolioData = {
   services: [
     {
       icon: "💻",
@@ -48,7 +48,7 @@ export const portfolioData = {
   ]
 };
 
-export default function About() {
+export const About = ()=> {
   const [modalActive, setModalActive] = useState(false);
   const [selectedTestimonial, setSelectedTestimonial] = useState(null);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -63,16 +63,16 @@ export default function About() {
   };
 
   return (
-    <article className="animate-fadeIn px-4 sm:px-6 lg:px-8 ">
+    <article>
       {/* Header Section */}
-      <header className="mb-8 sm:mb-10 lg:mb-6">
+      <header className="mb-8 sm:mb-10 lg:mb-12">
         <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-semibold relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-1 after:bg-gradient-to-r after:from-[#ffdb70] after:to-[#f5c842] after:rounded-full">
           About me
         </h2>
       </header>
 
       {/* Introduction Section */}
-      <section className="text-[#d6d6d6] text-sm sm:text-base leading-relaxed space-y-4 mb-12 sm:mb-16 lg:mb-6">
+      <section className="text-[#d6d6d6] text-sm sm:text-base leading-relaxed space-y-4 mb-12 sm:mb-16 lg:mb-20">
         <p className="text-base sm:text-lg font-semibold text-white">
           Welcome to My Portfolio!
         </p>
@@ -85,7 +85,7 @@ export default function About() {
       </section>
 
       {/* Services Section */}
-      <section className="mb-12 sm:mb-16 lg:mb-6">
+      <section className="mb-12 sm:mb-16 lg:mb-20">
         <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-6 sm:mb-8 lg:mb-10">
           What I'm doing
         </h3>
@@ -112,8 +112,8 @@ export default function About() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="mb-12 sm:mb-16 lg:mb-6">
-        <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-6 sm:mb-8 lg:mb-6">
+      <section className="mb-12 sm:mb-16 lg:mb-20">
+        <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-6 sm:mb-8 lg:mb-10">
           Testimonials
         </h3>
 
