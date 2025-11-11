@@ -47,7 +47,7 @@ const portfolioData = {
 
 export const  Resume = () => {
   return (
-    <article className="px-4 sm:px-6 lg:px-8">
+    <article>
       {/* Header */}
       <header className="mb-8 sm:mb-10 lg:mb-12">
         <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-semibold relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-1 after:bg-gradient-to-r after:from-[#ffdb70] after:to-[#f5c842] after:rounded-full">
@@ -65,7 +65,7 @@ export const  Resume = () => {
           <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-medium">Education</h3>
         </div>
 
-        <ol className="relative ml-5 sm:ml-8 lg:ml-12 space-y-8 sm:space-y-10 lg:space-y-12">
+        <ol className="relative ml-4">
           {/* Vertical timeline line */}
           <div className="absolute left-0 top-2 bottom-0 w-0.5 bg-[#383838]"></div>
           
