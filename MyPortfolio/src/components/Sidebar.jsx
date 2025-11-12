@@ -47,7 +47,7 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
     <aside
       className={`flex-shrink-0 bg-[#1e1e1f] border border-[#383838] rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)]
       transition-all duration-500 overflow-hidden
-      ${isActive ? "max-h-[800px]" : "max-h-28"}
+      ${isActive ? "max-h-[800px]" : "max-h-35"}
       lg:max-h-max lg:w-[300px] w-full`}
     >
       {/* MOBILE / SMALL SCREEN */}
@@ -128,120 +128,6 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
             ))}
           </ul>
         </div>
-      </div>
-
-      {/* DESKTOP VIEW */}
-      <div className="hidden md:flex flex-col items-center text-center p-6">
-        <figure className="bg-gradient-to-br from-[#404040] to-[#303030] rounded-3xl overflow-hidden w-36 h-36 mb-4 shadow-inner">
-          <img
-            src={personalInfo.avatar}
-            alt={personalInfo.name}
-            className="w-full h-full object-cover"
-          />
-        </figure>
-
-        <h1 className="text-white text-2xl font-semibold mb-2">
-          {personalInfo.name}
-        </h1>
-        <p className="bg-[#2b2b2c] text-white text-[14px]  w-full py-1 rounded-md mb-4 font-regular shadow-md">
-          {personalInfo.title}
-        </p>
-
-        <div className="w-full h-px bg-[#383838] my-6"></div>
-
-        <ul className="space-y-4">
-          <li className="flex items-center gap-4">
-            <div className="bg-[#2b2b2c] w-10 h-10 rounded-xl flex items-center justify-center text-[#ffdb70] shadow-inner">
-              <Mail size={16} />
-            </div>
-            <div className="text-left">
-              <p className="text-[#d6d6d6b3] text-xs uppercase mb-1 tracking-wide">
-                Email
-              </p>
-              <a
-                href={`mailto:${personalInfo.email}`}
-                className="text-white text-sm hover:text-[#ffdb70] transition-colors truncate block"
-              >
-                {personalInfo.email}
-              </a>
-            </div>
-          </li>
-
-          <li className="flex items-center gap-4">
-            <div className="bg-[#2b2b2c] w-10 h-10 rounded-xl flex items-center justify-center text-[#ffdb70] shadow-inner">
-              <Phone size={16} />
-            </div>
-            <div className="text-left">
-              <p className="text-[#d6d6d6b3] text-xs uppercase mb-1 tracking-wide">
-                Phone
-              </p>
-              <a
-                href={`tel:${personalInfo.phone}`}
-                className="text-white text-sm hover:text-[#ffdb70] transition-colors"
-              >
-                {personalInfo.phone}
-              </a>
-            </div>
-          </li>
-
-          <li className="flex items-center gap-4">
-            <div className="bg-[#2b2b2c] w-10 h-10 rounded-xl flex items-center justify-center text-[#ffdb70] shadow-inner">
-              <Calendar size={16} />
-            </div>
-            <div className="text-left">
-              <p className="text-[#d6d6d6b3] text-xs uppercase mb-1 tracking-wide">
-                Birthday
-              </p>
-              <time className="text-white text-sm">
-                {personalInfo.birthday}
-              </time>
-            </div>
-          </li>
-
-          <li className="flex items-center gap-4">
-            <div className="bg-[#2b2b2c] w-10 h-10 rounded-xl flex items-center justify-center text-[#ffdb70] shadow-inner">
-              <MapPin size={16} />
-            </div>
-            <div className="text-left">
-              <p className="text-[#d6d6d6b3] text-xs uppercase mb-1 tracking-wide">
-                Location
-              </p>
-              <address className="text-white text-sm not-italic leading-snug">
-                {personalInfo.location}
-              </address>
-            </div>
-          </li>
-        </ul>
-
-        <div className="w-full h-px bg-[#383838] my-6"></div>
-
-         {/* Social Icons */}
-        <ul className="flex justify-center gap-6">
-          <li>
-            <a
-              href={socialLinks.facebook}
-              className="text-[#d6d6d6b3] hover:text-white transition-colors"
-            >
-              <Facebook size={20} />
-            </a>
-          </li>
-          <li>
-            <a
-              href={socialLinks.github}
-              className="text-[#d6d6d6b3] hover:text-white transition-colors"
-            >
-              <Github size={20} />
-            </a>
-          </li>
-          <li>
-            <a
-              href={socialLinks.instagram}
-              className="text-[#d6d6d6b3] hover:text-white transition-colors"
-            >
-              <Instagram size={20} />
-            </a>
-          </li>
-        </ul>
       </div>
     </aside>
   );
