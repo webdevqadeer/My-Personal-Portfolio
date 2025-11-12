@@ -12,7 +12,7 @@ const App = () => {
   const [sidebarActive, setSidebarActive] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#121212] text-white flex flex-col lg:flex-row gap-6 p-6 ">
+    <div className="min-h-screen bg-[#121212] text-white flex flex-col md:flex-col gap-6 p-6 ">
       <Sidebar isActive={sidebarActive} toggleSidebar={() => setSidebarActive(!sidebarActive)} />
       <main className="flex-1 bg-[#1e1e1f] rounded-3xl p-6 md:p-12 shadow-2xl relative max-w-7xl mx-auto w-full">
         <Navbar activePage={activePage} setActivePage={setActivePage} />
@@ -20,7 +20,7 @@ const App = () => {
         {activePage === 'about' && <About />}
         {activePage === 'resume' && <Resume />}
         {activePage === 'portfolio' && <Portfolio />} 
-        {activePage === 'certifications' && <Certifications />} 
+        {activePage === 'certificate' && <Certifications />} 
         {activePage === 'contact' && <Contact />} 
       </main>
     </div>

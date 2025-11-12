@@ -131,7 +131,7 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
       </div>
 
       {/* DESKTOP VIEW */}
-      <div className="hidden lg:flex flex-col items-center text-center p-6">
+      <div className="hidden md:flex flex-col items-center text-center p-6">
         <figure className="bg-gradient-to-br from-[#404040] to-[#303030] rounded-3xl overflow-hidden w-36 h-36 mb-4 shadow-inner">
           <img
             src={personalInfo.avatar}
