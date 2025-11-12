@@ -62,7 +62,7 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
             <h1 className="text-white font-semibold mb-1 truncate text-[0.9rem] sm:text-base md:text-lg">
               {personalInfo.name}
             </h1>
-            <p className="bg-[#2b2b2c] text-white px-2 py-1 rounded-lg font-medium shadow-md inline-block truncate
+            <p className="bg-[#2b2b2c] text-white px-2 py-1 rounded-lg font-medium shadow-md inline-block truncate max-w-full
               text-[0.65rem] sm:text-xs md:text-sm">
               {personalInfo.title}
             </p>
@@ -73,17 +73,20 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
         <button
           onClick={toggleSidebar}
           aria-expanded={isActive}
-          className="absolute top-0 right-0 bg-[#2b2b2c] text-[#ffdb70] w-8 h-8 rounded-sm flex items-center justify-center hover:bg-[#3a3a3a] transition-colors"
+          aria-label={isActive ? "Collapse sidebar" : "Expand sidebar"}
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 bg-[#2b2b2c] text-[#ffdb70] w-8 h-8 rounded-lg flex items-center justify-center hover:bg-[#3a3a3a] transition-colors shadow-lg"
         >
           <ChevronDown
             size={18}
-            className={`transition-transform ${isActive ? "rotate-180" : ""}`}
+            className={`transition-transform duration-300 ${isActive ? "rotate-180" : ""}`}
           />
         </button>
 
         {/* Expandable content */}
         <div
-          className={`transition-all duration-300 overflow-hidden ${isActive ? "opacity-100 mt-4 max-h-[700px] ease-out" : "opacity-0 max-h-0"}`}
+          className={`transition-all duration-300 ${
+            isActive ? "opacity-100 mt-4 max-h-[700px] ease-out" : "opacity-0 max-h-0 ease-in"
+          }`}
         >
           <div className="w-full h-px bg-[#383838] my-4" />
 
@@ -93,19 +96,21 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
                 <div className="bg-[#2b2b2c] w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-[#ffdb70] shadow-inner flex-shrink-0">
                   <item.icon size={16} />
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <p className="text-[#d6d6d6b3] text-[9px] sm:text-xs uppercase mb-0.5 tracking-wide">
                     {item.label}
                   </p>
                   {item.href ? (
                     <a
                       href={item.href}
-                      className="text-white text-sm sm:text-[0.85rem] hover:text-[#ffdb70] truncate block"
+                      className="text-white text-sm sm:text-[0.85rem] hover:text-[#ffdb70] transition-colors truncate block"
                     >
                       {item.value}
                     </a>
                   ) : (
-                    <span className="text-white text-sm sm:text-[0.85rem] truncate block">{item.value}</span>
+                    <span className="text-white text-sm sm:text-[0.85rem] truncate block">
+                      {item.value}
+                    </span>
                   )}
                 </div>
               </li>
@@ -119,10 +124,13 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
               <li key={index}>
                 <a
                   href={item.href}
-                  className="text-[#d6d6d6b3] hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#d6d6d6b3] hover:text-white transition-colors block"
                   aria-label={item.label}
                 >
-                  <item.icon size={20} />
+                  <item.icon size={20} className="sm:hidden" />
+                  <item.icon size={22} className="hidden sm:block" />
                 </a>
               </li>
             ))}
@@ -143,18 +151,18 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
         <h1 className="text-white text-2xl font-semibold mb-2">
           {personalInfo.name}
         </h1>
-        <p className="bg-[#2b2b2c] text-white text-[14px]  w-full py-1 rounded-md mb-4 font-regular shadow-md">
+        <p className="bg-[#2b2b2c] text-white text-[14px] w-full py-1 rounded-md mb-4 font-regular shadow-md">
           {personalInfo.title}
         </p>
 
         <div className="w-full h-px bg-[#383838] my-6"></div>
 
-        <ul className="space-y-4">
+        <ul className="space-y-4 w-full">
           <li className="flex items-center gap-4">
-            <div className="bg-[#2b2b2c] w-10 h-10 rounded-xl flex items-center justify-center text-[#ffdb70] shadow-inner">
+            <div className="bg-[#2b2b2c] w-10 h-10 rounded-xl flex items-center justify-center text-[#ffdb70] shadow-inner flex-shrink-0">
               <Mail size={16} />
             </div>
-            <div className="text-left">
+            <div className="text-left min-w-0 flex-1">
               <p className="text-[#d6d6d6b3] text-xs uppercase mb-1 tracking-wide">
                 Email
               </p>
@@ -168,16 +176,16 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
           </li>
 
           <li className="flex items-center gap-4">
-            <div className="bg-[#2b2b2c] w-10 h-10 rounded-xl flex items-center justify-center text-[#ffdb70] shadow-inner">
+            <div className="bg-[#2b2b2c] w-10 h-10 rounded-xl flex items-center justify-center text-[#ffdb70] shadow-inner flex-shrink-0">
               <Phone size={16} />
             </div>
-            <div className="text-left">
+            <div className="text-left min-w-0 flex-1">
               <p className="text-[#d6d6d6b3] text-xs uppercase mb-1 tracking-wide">
                 Phone
               </p>
               <a
                 href={`tel:${personalInfo.phone}`}
-                className="text-white text-sm hover:text-[#ffdb70] transition-colors"
+                className="text-white text-sm hover:text-[#ffdb70] transition-colors truncate block"
               >
                 {personalInfo.phone}
               </a>
@@ -185,24 +193,24 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
           </li>
 
           <li className="flex items-center gap-4">
-            <div className="bg-[#2b2b2c] w-10 h-10 rounded-xl flex items-center justify-center text-[#ffdb70] shadow-inner">
+            <div className="bg-[#2b2b2c] w-10 h-10 rounded-xl flex items-center justify-center text-[#ffdb70] shadow-inner flex-shrink-0">
               <Calendar size={16} />
             </div>
-            <div className="text-left">
+            <div className="text-left min-w-0 flex-1">
               <p className="text-[#d6d6d6b3] text-xs uppercase mb-1 tracking-wide">
                 Birthday
               </p>
-              <time className="text-white text-sm">
+              <time className="text-white text-sm block">
                 {personalInfo.birthday}
               </time>
             </div>
           </li>
 
           <li className="flex items-center gap-4">
-            <div className="bg-[#2b2b2c] w-10 h-10 rounded-xl flex items-center justify-center text-[#ffdb70] shadow-inner">
+            <div className="bg-[#2b2b2c] w-10 h-10 rounded-xl flex items-center justify-center text-[#ffdb70] shadow-inner flex-shrink-0">
               <MapPin size={16} />
             </div>
-            <div className="text-left">
+            <div className="text-left min-w-0 flex-1">
               <p className="text-[#d6d6d6b3] text-xs uppercase mb-1 tracking-wide">
                 Location
               </p>
@@ -215,12 +223,15 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
 
         <div className="w-full h-px bg-[#383838] my-6"></div>
 
-         {/* Social Icons */}
+        {/* Social Icons */}
         <ul className="flex justify-center gap-6">
           <li>
             <a
               href={socialLinks.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#d6d6d6b3] hover:text-white transition-colors"
+              aria-label="Facebook"
             >
               <Facebook size={20} />
             </a>
@@ -228,7 +239,10 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
           <li>
             <a
               href={socialLinks.github}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#d6d6d6b3] hover:text-white transition-colors"
+              aria-label="Github"
             >
               <Github size={20} />
             </a>
@@ -236,7 +250,10 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
           <li>
             <a
               href={socialLinks.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#d6d6d6b3] hover:text-white transition-colors"
+              aria-label="Instagram"
             >
               <Instagram size={20} />
             </a>
@@ -246,5 +263,3 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
     </aside>
   );
 };
-
-
