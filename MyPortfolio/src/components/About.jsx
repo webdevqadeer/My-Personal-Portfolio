@@ -65,14 +65,14 @@ export const About = ()=> {
   return (
     <article>
       {/* Header Section */}
-      <header className="mb-8 sm:mb-10 lg:mb-12">
+      <header className="mb-8 sm:mb-10 md:mb-6">
         <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-semibold relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-1 after:bg-gradient-to-r after:from-[#ffdb70] after:to-[#f5c842] after:rounded-full">
           About me
         </h2>
       </header>
 
       {/* Introduction Section */}
-      <section className="text-[#d6d6d6] text-sm sm:text-base leading-relaxed space-y-4 mb-12 sm:mb-16 lg:mb-20">
+      <section className="text-[#d6d6d6] text-sm sm:text-base leading-relaxed space-y-4 mb-12 sm:mb-16 md:mb-6">
         <p className="text-base sm:text-lg font-semibold text-white">
           Welcome to My Portfolio!
         </p>
@@ -85,17 +85,17 @@ export const About = ()=> {
       </section>
 
       {/* Services Section */}
-      <section className="mb-12 sm:mb-16 lg:mb-20">
-        <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-6 sm:mb-8 lg:mb-10">
+      <section className="mb-12 sm:mb-16 md:mb-8">
+        <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-6 sm:mb-8 md:mb-10">
           What I'm doing
         </h3>
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 lg:gap-6">
           {portfolioData.services.map((service, index) => (
             <li 
               key={index} 
-              className="relative bg-gradient-to-br from-[#404040] to-transparent p-5 sm:p-6 lg:p-7 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+              className="relative bg-gradient-to-br from-[#404040] to-transparent p-5 sm:p-6 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
             >
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 text-center md:text-left">
+              <div className="text-3xl sm:text-4xl mb-2 sm:mb-4 text-center md:text-left">
                 {service.icon}
               </div>
               <div className="text-center md:text-left">
@@ -112,7 +112,7 @@ export const About = ()=> {
       </section>
 
       {/* Testimonials Section */}
-      <section className="mb-12 sm:mb-16 lg:mb-20">
+      <section className="mb-12 sm:mb-16 md:mb-0">
         <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-6 sm:mb-8 lg:mb-10">
           Testimonials
         </h3>
@@ -133,9 +133,9 @@ export const About = ()=> {
                 setSelectedTestimonial(testimonial);
                 setModalActive(true);
               }}
-              className="relative bg-[#2b2b2c] border border-[#383838] p-5 sm:p-6 pt-14 sm:pt-16 rounded-2xl cursor-pointer hover:border-[#4a4a4a] transition-all w-[85%] sm:w-[calc(50%-12px)] snap-start flex-shrink-0"
+              className="relative bg-[#2b2b2c] border border-[#383838] p-5 sm:p-6 pt-14 sm:pt-16 rounded-xl cursor-pointer hover:border-[#4a4a4a] transition-all w-[85%] sm:w-[calc(50%-12px)] snap-start flex-shrink-0"
             >
-              <figure className="absolute top-0 left-4 sm:left-6 transform -translate-y-1/2 bg-gradient-to-br from-[#505050] to-[#3a3a3a] rounded-3xl w-16 h-16 sm:w-20 sm:h-20 overflow-hidden shadow-xl border-4 border-[#1e1e1f]">
+              <figure className="absolute top-0 left-4 sm:left-6 transform -translate-y-1/2 bg-gradient-to-br from-[#505050] to-[#3a3a3a] rounded-xl w-16 h-16 p-2 sm:w-20 sm:h-20 overflow-hidden shadow-xl border-4 border-[#1e1e1f]">
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.name}
@@ -143,7 +143,7 @@ export const About = ()=> {
                 />
               </figure>
 
-              <h4 className="text-white text-base sm:text-xl font-medium mb-2 sm:mb-3">
+              <h4 className="text-white text-base sm:text-xl font-medium mb-2 sm:mb-3 ">
                 {testimonial.name}
               </h4>
 

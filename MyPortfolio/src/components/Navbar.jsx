@@ -6,7 +6,7 @@ export const Navbar = ({ activePage, setActivePage }) => {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="hidden md:flex absolute top-0 right-0 bg-[#1e1e1fb3] backdrop-blur-md border border-[#383838] rounded-bl-3xl shadow-2xl z-20">
+      <nav className="hidden md:flex absolute top-0 right-0 bg-[#1e1e1fb3] backdrop-blur-md border border-[#383838] rounded-bl-xl shadow-2xl z-20">
         <ul className="flex justify-center items-center gap-2 lg:gap-4 p-2 lg:px-5">
           {pages.map((page) => (
             <li key={page}>
