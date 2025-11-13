@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Navbar = ({ activePage, setActivePage }) => {
-  const pages = ["About", "Resume", "Portfolio", "Contact", "Certificate"];
+  const pages = ["About", "Resume", "Portfolio", "Certificates", "Contact"];
 
   return (
     <>

@@ -63,7 +63,7 @@ export const Contact = () => {
           <button
             type="submit"
             disabled={!formValid}
-            className="bg-gradient-to-br from-[#404040] to-transparent px-6 py-4 rounded-2xl text-[#ffdb70] flex items-center gap-3 hover:from-[#ffdb70] hover:to-[#f5c842] hover:text-[#0c0c0d] transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+            className="bg-gradient-to-br from-[#404040] to-transparent px-6 py-2 rounded-xl text-[#ffdb70] flex items-center gap-3 hover:from-[#ffdb70] hover:to-[#f5c842] hover:text-[#0c0c0d] transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
           >
             <Send size={18} />
             <span>Send Message</span>
