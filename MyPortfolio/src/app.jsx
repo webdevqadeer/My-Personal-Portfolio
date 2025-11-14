@@ -20,7 +20,7 @@ const App = () => {
         {activePage === 'about' && <About />}
         {activePage === 'resume' && <Resume />}
         {activePage === 'portfolio' && <Portfolio />} 
-        {activePage === 'certificate' && <Certifications />} 
+        {activePage === 'certificates' && <Certifications />} 
         {activePage === 'contact' && <Contact />} 
       </main>
     </div>

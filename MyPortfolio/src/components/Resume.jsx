@@ -123,7 +123,6 @@ export const  Resume = () => {
           ))}
           
           {/* Extension line below last item */}
-          <div className="absolute left-0 bottom-0 w-0.5 h-8 bg-[#383838] transform translate-y-full"></div>
         </ol>
       </section>
 

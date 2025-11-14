@@ -47,12 +47,12 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
     <aside
       className={`flex-shrink-0 bg-[#1e1e1f] border border-[#383838] rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)]
       transition-all duration-500 overflow-hidden
-      ${isActive ? "max-h-[800px]" : "max-h-35"}
-      md:max-h-max md:w-[300px] w-full`}
+      ${isActive ? "max-h-[800px]" : "max-h-40"}
+      md:max-h-max md:w-[280px] w-full`}
     >
       {/* MOBILE / SMALL SCREEN */}
-      <div className="md:hidden relative p-4 sm:p-5">
-        <div className="flex items-center justify-center md:flex-col gap-3 sm:gap-4">
+      <div className="md:hidden relative p-4  sm:p-5">
+        <div className="flex items-center justify-center flex-col gap-3 sm:gap-4">
           <figure className="bg-gradient-to-br from-[#404040] to-[#303030] rounded-xl overflow-hidden 
             w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex-shrink-0 shadow-inner">
             <img src={personalInfo.avatar} alt={personalInfo.name} className="w-full h-full object-cover" />
@@ -83,7 +83,7 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
 
         {/* Expandable content */}
         <div
-          className={`transition-all duration-300 overflow-hidden ${isActive ? "opacity-100 mt-4 max-h-[700px] ease-out" : "opacity-0 max-h-0"}`}
+          className={`transition-all duration-300 overflow-hidden ${isActive ? "opacity-100  max-h-[700px] ease-out" : "opacity-0 max-h-0"}`}
         >
           <div className="w-full h-px bg-[#383838] my-4" />
 
