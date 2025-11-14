@@ -48,7 +48,7 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
       className={`flex-shrink-0 bg-[#1e1e1f] border border-[#383838] rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)]
       transition-all duration-500 overflow-hidden
       ${isActive ? "max-h-[800px]" : "max-h-40"}
-      md:max-h-max md:w-[300px] w-full`}
+      md:max-h-max md:w-[280px] w-full`}
     >
       {/* MOBILE / SMALL SCREEN */}
       <div className="md:hidden relative p-4  sm:p-5">

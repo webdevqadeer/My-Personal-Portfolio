@@ -31,7 +31,7 @@ export const Navbar = ({ activePage, setActivePage }) => {
           <button
             key={page}
             onClick={() => setActivePage(page.toLowerCase())}
-            className={`text-xs font-medium transition-colors ${
+            className={` text-[12px]   transition-colors ${
               activePage === page.toLowerCase()
                 ? "text-[#ffdb70]"
                 : "text-[#d6d6d6] hover:text-[#ffdb70]"
