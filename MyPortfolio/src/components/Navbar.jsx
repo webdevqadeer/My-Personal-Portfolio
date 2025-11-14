@@ -12,7 +12,7 @@ export const Navbar = ({ activePage, setActivePage }) => {
             <li key={page}>
               <button
                 onClick={() => setActivePage(page.toLowerCase())}
-                className={`text-xs lg:text-sm px-2 transition-colors ${
+                className={`text-xs md:text-sm px-2 font-semibold transition-colors ${
                   activePage === page.toLowerCase()
                     ? "text-[#ffdb70]"
                     : "text-[#d6d6d6] hover:text-[#d6d6d6b3]"

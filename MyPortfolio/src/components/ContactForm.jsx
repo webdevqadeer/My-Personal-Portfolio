@@ -19,7 +19,7 @@ export const Contact = () => {
   };
 
   return (
-    <article>
+    <article className="mb-12">
       <header className="mb-6">
         <h2 className="text-white text-2xl lg:text-3xl font-semibold relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-1 after:bg-gradient-to-r after:from-[#ffdb70] after:to-[#f5c842] after:rounded-full">
           Contact
