@@ -59,11 +59,11 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
           </figure>
 
           <div className="flex-1 text-center min-w-0">
-            <h1 className="text-white font-semibold mb-1 truncate text-[0.9rem] sm:text-base md:text-lg">
+            <h1 className="text-white font-semibold mb-1 truncate text-[1rem] sm:text-base md:text-lg">
               {personalInfo.name}
             </h1>
             <p className="bg-[#2b2b2c] text-white px-2 py-1 rounded-lg font-medium shadow-md inline-block truncate
-              text-[0.65rem] sm:text-xs md:text-sm">
+              text-[0.78rem] sm:text-xs md:text-sm">
               {personalInfo.title}
             </p>
           </div>
