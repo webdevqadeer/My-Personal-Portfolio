@@ -1,4 +1,5 @@
 import React from "react";
+import portfolioData from "../Data/portfolioData";
 import {
   Mail,
   Phone,
@@ -10,22 +11,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-const portfolioData = {
-  personalInfo: {
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Abdul",
-    name: "Abdul Qadeer",
-    title: "Professional Web developer",
-    email: "abdul@example.com",
-    phone: "+92 300 1234567",
-    birthday: "May 23, 1997",
-    location: "Lahore, Punjab, Pakistan",
-  },
-  socialLinks: {
-    facebook: "https://facebook.com",
-    github: "https://github.com",
-    instagram: "https://instagram.com",
-  },
-};
+
 
 export const Sidebar = ({ isActive, toggleSidebar }) => {
   const { personalInfo, socialLinks } = portfolioData;

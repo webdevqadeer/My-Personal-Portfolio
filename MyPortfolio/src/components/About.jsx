@@ -1,52 +1,6 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
-
-const portfolioData = {
-  services: [
-    {
-      icon: "💻",
-      title: "Web Development",
-      description: "High-quality development of sites at the professional level."
-    },
-    {
-      icon: "🎨",
-      title: "Web Design",
-      description: "The most modern and high-quality design made at a professional level."
-    },
-    {
-      icon: "📱",
-      title: "Mobile Apps",
-      description: "Professional development of applications for iOS and Android."
-    },
-    {
-      icon: "📸",
-      title: "Photography",
-      description: "I make high-quality photos of any category at a professional level."
-    }
-  ],
-  testimonials: [
-    {
-      name: "Daniel Lewis",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Daniel",
-      text: "Abdul Qadeer was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client."
-    },
-    {
-      name: "Jessica Miller",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Jessica",
-      text: "We hired Abdul Qadeer to design a Figma design for our brand website landing page. The result was outstanding and exceeded our expectations."
-    },
-    {
-      name: "Emily Johnson",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emily",
-      text: "Outstanding work on our company logo. Abdul delivered exactly what we needed with great attention to detail."
-    },
-    {
-      name: "Michael Brown",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael",
-      text: "The UI/UX design was exceptional. Our users love the new interface and it has improved engagement significantly."
-    }
-  ]
-};
+import portfolioData from "../Data/portfolioData"
 
 export const About = ()=> {
   const [modalActive, setModalActive] = useState(false);
