@@ -52,18 +52,18 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
     >
       {/* MOBILE / SMALL SCREEN */}
       <div className="md:hidden relative p-4  sm:p-5">
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex items-center justify-center flex-col gap-3 sm:gap-4">
           <figure className="bg-gradient-to-br from-[#404040] to-[#303030] rounded-xl overflow-hidden 
-            w-24 h-24 md:w-24 md:h-24 flex-shrink-0 shadow-inner">
+            w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex-shrink-0 shadow-inner">
             <img src={personalInfo.avatar} alt={personalInfo.name} className="w-full h-full object-cover" />
           </figure>
 
           <div className="flex-1 text-center min-w-0">
-            <h1 className="text-white font-semibold mb-1 truncate text-[1rem] sm:text-base md:text-lg">
+            <h1 className="text-white font-semibold mb-1 truncate text-[0.9rem] sm:text-base md:text-lg">
               {personalInfo.name}
             </h1>
             <p className="bg-[#2b2b2c] text-white px-2 py-1 rounded-lg font-medium shadow-md inline-block truncate
-              text-[0.78rem] sm:text-xs md:text-sm">
+              text-[0.65rem] sm:text-xs md:text-sm">
               {personalInfo.title}
             </p>
           </div>
