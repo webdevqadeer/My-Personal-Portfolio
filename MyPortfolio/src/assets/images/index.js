@@ -23,7 +23,7 @@ import hoobankProject from "./hoobank project.png";
 import editAndCraft from "./edit and craft.png";
 import dp1 from "./dp1.png";
 
-//Certificates Cover Photo
+//Certificates Photo
 import designuiux from "./designuiux.png"
 import foundationuiux from "./foundationuiux.png"
 import introjavascript from "./introJavascript.png"
