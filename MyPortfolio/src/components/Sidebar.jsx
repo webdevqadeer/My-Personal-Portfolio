@@ -38,7 +38,7 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
     >
       {/* MOBILE / SMALL SCREEN */}
       <div className="md:hidden relative p-4  sm:p-5">
-        <div className="flex items-center justify-center flex-col gap-3 sm:gap-4">
+        <div className="flex items-center justify-center  gap-3 sm:gap-4">
           <figure className="bg-gradient-to-br from-[#404040] to-[#303030] rounded-xl overflow-hidden 
             w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex-shrink-0 shadow-inner">
             <img src={personalInfo.avatar} alt={personalInfo.name} className="w-full h-full object-cover" />
