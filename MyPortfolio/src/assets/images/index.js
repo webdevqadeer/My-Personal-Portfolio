@@ -24,9 +24,9 @@ import editAndCraft from "./edit and craft.png";
 import dp1 from "./dp1.png";
 
 //Certificates Photo
-import designuiux from "./designuiux.png"
+import uiux from "./uiux.png"
 import foundationuiux from "./foundationuiux.png"
-import introjavascript from "./introJavascript.png"
+// import introjavascript from "./introJavascript.png"
 import frontend from "./frontend.png"
 
 // Export all together
@@ -53,8 +53,8 @@ export {
   editAndCraft,
   dp1,
 
-  designuiux,
+  uiux,
   foundationuiux,
   frontend,
-  introjavascript,
+  // introjavascript,
 };

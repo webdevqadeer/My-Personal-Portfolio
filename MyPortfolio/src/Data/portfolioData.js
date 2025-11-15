@@ -135,14 +135,14 @@ const portfolioData = {
       title: "Javascript",
       issuer: "Coursera",
       date: "Aug 2025",
-      image: Img.introjavascript,
+      image: Img.frontend,
       credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/NDME2P535RKY"
     },
     {
       title: "Designing (UI/UX)",
       issuer: "Coursera",
       date: "Feb 2024",
-      image: Img.designuiux,
+      image: Img.uiux,
       credentialUrl: "https://coursera.org/verify/Y7UGE8T6RBR8"
     },
     {
