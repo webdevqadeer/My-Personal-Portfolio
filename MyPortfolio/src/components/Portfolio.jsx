@@ -59,7 +59,7 @@ export const Portfolio = () => {
 
       {/* Filter Buttons */}
       <nav className="mb-10">
-        <ul className="flex flex-wrap gap-6 sm:gap-4">
+        <ul className="flex flex-wrap gap-4 sm:gap-4">
           {categories.map((cat) => (
             <li key={cat}>
               <button 
