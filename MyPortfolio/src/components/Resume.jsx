@@ -1,66 +1,119 @@
 import React from 'react';
-import { Layers, Briefcase, User, Code, HeartHandshake, BookOpen, X } from 'lucide-react';
-import portfolioData from "../Data/portfolioData";
+import { Briefcase, BookOpen } from 'lucide-react';
+import portfolioData from "../Data/portfolioData"
 
 export const Resume = () => {
-
   return (
     <article>
-      <header className="mb-6">
-        <h2 className="text-white text-2xl lg:text-3xl font-semibold relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-1 after:bg-gradient-to-r after:from-[#ffdb70] after:to-[#f5c842] after:rounded-full">
+      {/* Header */}
+      <header className="mb-8 sm:mb-10 md:mb-8">
+        <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-semibold relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-1 after:bg-gradient-to-r after:from-[#ffdb70] after:to-[#f5c842] after:rounded-full">
           Resume
         </h2>
       </header>
 
-      <section className="mb-10">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="bg-gradient-to-br from-[#404040] to-[#1e1e1f] w-12 h-12 rounded-xl flex items-center justify-center text-[#ffdb70]">
-            <BookOpen size={20} />
+      {/* Education Section */}
+      <section className="mb-12 sm:mb-16 lg:mb-20">
+        <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-10 lg:mb-12">
+          <div className="bg-gradient-to-br from-[#404040] to-[#1e1e1f] w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-[#ffdb70] flex-shrink-0">
+            <BookOpen size={18} className="sm:hidden" />
+            <BookOpen size={20} className="hidden sm:block" />
           </div>
-          <h3 className="text-white text-xl lg:text-2xl font-medium">Education</h3>
+          <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-medium">Education</h3>
         </div>
 
-        <ol className="ml-12 space-y-5 text-sm">
+        <ol className="relative ml-4">
+          {/* Vertical timeline line */}
+          <div className="absolute left-0 top-2 bottom-0 w-0.5 bg-[#383838]"></div>
+
           {portfolioData.education.map((edu, index) => (
-            <li key={index} className="relative">
-              <h4 className="text-white text-base font-medium mb-2">{edu.institution}</h4>
-              <span className="text-[#e5c368] text-sm mb-2 block">{edu.period}</span>
-              <p className="text-[#d6d6d6] leading-relaxed">{edu.description}</p>
+            <li key={index} className="relative pl-8 sm:pl-10 lg:pl-12">
+              {/* Timeline dot - centered on the line */}
+              <div className="absolute left-0 top-2 w-4 h-4 bg-[#ffdb70] rounded-full border-4 border-[#1e1e1f] transform -translate-x-[7px]"></div>
+
+              <h4 className="text-white text-base sm:text-lg lg:text-xl font-medium mb-3 sm:mb-4 leading-snug">
+                {edu.institution}
+              </h4>
+              <span className="text-[#e5c368] text-xs sm:text-sm lg:text-base mb-3 sm:mb-4 block font-medium">
+                {edu.period}
+              </span>
+              <p className="text-[#d6d6d6] text-sm sm:text-base leading-relaxed">
+                {edu.description}
+              </p>
             </li>
           ))}
+
+          {/* Extension line below last item */}
+          <div className="absolute left-0 bottom-0 w-0.5 h-8 bg-[#383838] transform translate-y-full"></div>
         </ol>
       </section>
 
-      <section className="mb-10">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="bg-gradient-to-br from-[#404040] to-[#1e1e1f] w-12 h-12 rounded-xl flex items-center justify-center text-[#ffdb70]">
-            <Briefcase size={20} />
+      {/* Experience Section */}
+      <section className="mb-12 sm:mb-16 lg:mb-20">
+        <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-10 lg:mb-12">
+          <div className="bg-gradient-to-br from-[#404040] to-[#1e1e1f] w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-[#ffdb70] flex-shrink-0">
+            <Briefcase size={18} className="sm:hidden" />
+            <Briefcase size={20} className="hidden sm:block" />
           </div>
-          <h3 className="text-white text-xl lg:text-2xl font-medium">Experience</h3>
+          <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-medium">Experience</h3>
         </div>
 
-        <ol className="ml-12 space-y-5 text-sm">
+        <ol className="relative ml-5 sm:ml-8 lg:ml-12 space-y-8 sm:space-y-10 lg:space-y-12">
+          {/* Vertical timeline line */}
+          <div className="absolute left-0 top-2 bottom-0 w-0.5 bg-[#383838]"></div>
+
           {portfolioData.experience.map((exp, index) => (
-            <li key={index}>
-              <h4 className="text-white text-base font-medium mb-2">{exp.title}</h4>
-              <span className="text-[#e5c368] text-sm mb-2 block">{exp.period}</span>
-              <p className="text-[#d6d6d6] leading-relaxed">{exp.description}</p>
+            <li key={index} className="relative pl-8 sm:pl-10 lg:pl-12">
+              {/* Timeline dot - centered on the line */}
+              <div className="absolute left-0 top-2 w-4 h-4 bg-[#ffdb70] rounded-full border-4 border-[#1e1e1f] transform -translate-x-[7px]"></div>
+
+              <h4 className="text-white text-base sm:text-lg lg:text-xl font-medium mb-3 sm:mb-4 leading-snug">
+                {exp.title}
+              </h4>
+              <span className="text-[#e5c368] text-xs sm:text-sm lg:text-base mb-3 sm:mb-4 block font-medium">
+                {exp.period}
+              </span>
+              <p className="text-[#d6d6d6] text-sm sm:text-base leading-relaxed">
+                {exp.description}
+              </p>
             </li>
           ))}
+
+          {/* Extension line below last item */}
         </ol>
       </section>
 
-      <section>
-        <h3 className="text-white text-xl lg:text-2xl font-medium mb-5">My skills</h3>
-        <ul className="bg-gradient-to-br from-[#404040] to-transparent p-6 rounded-2xl shadow-lg space-y-4">
+      {/* Skills Section */}
+      <section className="mb-12 sm:mb-16 md:mb-0">
+        <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-6 sm:mb-8 lg:mb-10">
+          My skills
+        </h3>
+        <ul className="bg-gradient-to-br from-[#404040] to-transparent p-5 sm:p-6 lg:p-8 rounded-2xl shadow-lg space-y-5 sm:space-y-6">
           {portfolioData.skills.map((skill, index) => (
             <li key={index}>
-              <div className="flex items-center gap-2 mb-2">
-                <h5 className="text-white text-sm font-medium flex-1">{skill.name}</h5>
-                <data className="text-[#d6d6d6] text-sm">{skill.percentage}%</data>
+              <div className="flex items-center gap-3 mb-3">
+                {/* Skill Icon */}
+                <div className="text-2xl sm:text-3xl flex-shrink-0 w-8 h-8 flex items-center justify-center">
+                  <img
+                    src={skill.icon}
+                    alt={skill.name}
+                    className="w-8 h-8 object-contain"
+                  />
+                </div>
+                {/* Skill Name and Percentage */}
+                <h5 className="text-white text-sm sm:text-base font-medium flex-1">
+                  {skill.name}
+                </h5>
+                <data className="text-[#d6d6d6] text-xs sm:text-sm font-medium">
+                  {skill.percentage}%
+                </data>
               </div>
-              <div className="bg-[#383838] w-full h-2 rounded-full overflow-hidden">
-                <div className="bg-gradient-to-r from-[#ffdb70] to-[#f5c842] h-full rounded-full" style={{ width: `${skill.percentage}%` }}></div>
+              {/* Progress Bar */}
+              <div className="bg-[#383838] w-full h-2 sm:h-2.5 rounded-full overflow-hidden ">
+                <div
+                  className="bg-gradient-to-r from-[#ffdb70] to-[#f5c842] h-full rounded-full transition-all duration-500 ease-out"
+                  style={{ width: `${skill.percentage}%` }}
+                ></div>
               </div>
             </li>
           ))}
@@ -68,4 +121,4 @@ export const Resume = () => {
       </section>
     </article>
   );
-};
+}

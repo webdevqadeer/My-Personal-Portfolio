@@ -19,7 +19,7 @@ export const Contact = () => {
   };
 
   return (
-    <article>
+    <article className="mb-12">
       <header className="mb-6">
         <h2 className="text-white text-2xl lg:text-3xl font-semibold relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-1 after:bg-gradient-to-r after:from-[#ffdb70] after:to-[#f5c842] after:rounded-full">
           Contact
@@ -63,7 +63,7 @@ export const Contact = () => {
           <button
             type="submit"
             disabled={!formValid}
-            className="bg-gradient-to-br from-[#404040] to-transparent px-6 py-4 rounded-2xl text-[#ffdb70] flex items-center gap-3 hover:from-[#ffdb70] hover:to-[#f5c842] hover:text-[#0c0c0d] transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+            className="bg-gradient-to-br from-[#404040] to-transparent px-6 py-2 rounded-xl text-[#ffdb70] flex items-center gap-3 hover:from-[#ffdb70] hover:to-[#f5c842] hover:text-[#0c0c0d] transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
           >
             <Send size={18} />
             <span>Send Message</span>
