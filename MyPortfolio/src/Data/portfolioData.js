@@ -1,12 +1,13 @@
+import * as Img from "../assets/images";
 const portfolioData = {
   personalInfo: {
     name: "Abdul Qadeer",
     title: "Professional Web Developer",
-    email: "qadeerlatif56577@gmail.com",
+    email: "qadeerlatif56577",
     phone: "+92 316-6416866",
     birthday: "Jan 01, 2001",
-    location: "Bahawalpur, Punjab, Pakistan",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"
+    location: "Lahore, Punjab, Pakistan",
+    avatar: Img.dp1
   },
 
   socialLinks: {
@@ -31,22 +32,22 @@ const portfolioData = {
   testimonials: [
     {
       name: "Daniel Lewis",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
+      avatar:Img.avatar1,
       text: "Abdul Qadeer was hired to create a corporate identity. We were very pleased with the work done."
     },
     {
       name: "Jessica Miller",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+      avatar:Img.avatar4,
       text: "We hired Abdul Qadeer to design a Figma design for our brand website landing page."
     },
     {
       name: "Emily Evans",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+      avatar:Img.avatar2,
       text: "Abdul Qadeer was given a task to solve an error in our React.js project."
     },
     {
       name: "Henry William",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+      avatar:Img.avatar3,
       text: "Abdul Qadeer is a very good freelancer. He made a portfolio website for me."
     }
   ],
@@ -82,73 +83,74 @@ const portfolioData = {
     }
   ],
 
-  skills: [
-    { name: 'HTML', percentage: 100 },
-    { name: 'CSS', percentage: 95 },
-    { name: 'JavaScript', percentage: 85 },
-    { name: 'React.js', percentage: 98 },
-    { name: 'Tailwind CSS', percentage: 88 },
-    { name: 'Bootstrap', percentage: 80 },
-    { name: 'MongoDB', percentage: 94 },
-    { name: 'Express.js', percentage: 90 },
-    { name: 'Node.js', percentage: 96 }
-  ],
+  skills : [
+  { name: "HTML", percentage: 100, icon:Img.html },
+  { name: "CSS", percentage: 95, icon: Img.css },
+  { name: "JavaScript", percentage: 85, icon: Img.javascript },
+  { name: "React.js", percentage: 98, icon: Img.react },
+  { name: "Tailwind CSS", percentage: 88, icon: Img.tailwind },
+  { name: "Bootstrap", percentage: 80, icon: Img.bootstrap },
+  { name: "MongoDB", percentage: 94, icon: Img.mongodb },
+  { name: "Express.js", percentage: 90, icon: Img.node },
+  { name: "Node.js", percentage: 96, icon: Img.node },
+],
+
 
   projects: [
     {
       title: "Hoobank Project",
       category: "web development",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      link: "#"
+      image: Img.hoobankProject,
+      link: "https://premium-bank-site.netlify.app/"
     },
     {
       title: "Edit and Craft",
       category: "web development",
-      image: "https://images.unsplash.com/photo-1517292987719-0369a794ec0f?w=600&h=400&fit=crop",
-      link: "#"
+      image: Img.editAndCraft,
+      link: "https://edit-and-craft.netlify.app/"
     },
     {
       title: "Business Website",
       category: "web design",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
-      link: "#"
+      image: Img.businessweb,
+      link: "https://premium-softwarehouse-site.netlify.app/"
     },
     {
       title: "Shoppy Dashboard",
       category: "web development",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      link: "#"
-    }
+      image:Img.shoppyDashboard,
+      link: "https://custom-shoppy-dashboard.netlify.app/"
+    },
   ],
 
   certifications: [
     {
-      title: "React - The Complete Guide",
-      issuer: "Udemy",
-      date: "Dec 2023",
-      image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop",
-      credentialUrl: "#"
-    },
-    {
-      title: "Full Stack Web Development",
+      title: "Front-End Development",
       issuer: "Coursera",
-      date: "Oct 2023",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop",
-      credentialUrl: "#"
+      date: "Feb 2024",
+      image: Img.frontend,
+      credentialUrl: "https://coursera.org/verify/YLE3DXVQV8DB"
     },
     {
-      title: "MongoDB Developer",
-      issuer: "MongoDB University",
-      date: "Sep 2023",
-      image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&h=400&fit=crop",
-      credentialUrl: "#"
+      title: "Javascript",
+      issuer: "Coursera",
+      date: "Aug 2025",
+      image: Img.frontend,
+      credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/NDME2P535RKY"
     },
     {
-      title: "JavaScript Algorithms",
-      issuer: "freeCodeCamp",
-      date: "Aug 2023",
-      image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600&h=400&fit=crop",
-      credentialUrl: "#"
+      title: "Designing (UI/UX)",
+      issuer: "Coursera",
+      date: "Feb 2024",
+      image: Img.uiux,
+      credentialUrl: "https://coursera.org/verify/Y7UGE8T6RBR8"
+    },
+    {
+      title: "Foundations of (UX) Design",
+      issuer: "Coursera",
+      date: "Mar 2024",
+      image: Img.foundationuiux,
+      credentialUrl: "https://coursera.org/verify/XX8UMMVJEWLS"
     }
   ]
 };

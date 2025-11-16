@@ -1,37 +1,6 @@
 import React from "react"
 import { Award, ExternalLink } from 'lucide-react'
-
-// Mock data for preview
-const mockCertifications = [
-  {
-    title: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
-    date: "Jan 2024",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80",
-    credentialUrl: "#"
-  },
-  {
-    title: "Google Cloud Professional",
-    issuer: "Google Cloud",
-    date: "Dec 2023",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
-    credentialUrl: "#"
-  },
-  {
-    title: "React Advanced Certification",
-    issuer: "Meta",
-    date: "Nov 2023",
-    image: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=800&q=80",
-    credentialUrl: "#"
-  },
-  {
-    title: "Docker Certified Associate",
-    issuer: "Docker Inc",
-    date: "Oct 2023",
-    image: "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=800&q=80",
-    credentialUrl: "#"
-  }
-];
+import portfolioData from "../Data/portfolioData"
 
 export const Certifications = () => {
   return (
@@ -43,7 +12,7 @@ export const Certifications = () => {
       </header>
 
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-        {mockCertifications.map((cert, index) => (
+        {portfolioData.certifications.map((cert, index) => (
           <li key={index} className="group">
             <div className="bg-gradient-to-br from-[#404040] to-transparent rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:shadow-[#ffdb70]/10 hover:-translate-y-1">
 

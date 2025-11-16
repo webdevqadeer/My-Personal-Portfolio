@@ -1,51 +1,12 @@
 import React, { useState } from 'react';
 import { Eye } from 'lucide-react';
-
-// Mock data for preview
-const mockProjects = [
-  {
-    title: "E-Commerce Platform",
-    category: "web development",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-    link: "#"
-  },
-  {
-    title: "Brand Identity Design",
-    category: "web design",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80",
-    link: "#"
-  },
-  {
-    title: "React Dashboard",
-    category: "web development",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    link: "#"
-  },
-  {
-    title: "Portfolio Website",
-    category: "web design",
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80",
-    link: "#"
-  },
-  {
-    title: "Mobile App Interface",
-    category: "web design",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
-    link: "#"
-  },
-  {
-    title: "SaaS Platform",
-    category: "web development",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-    link: "#"
-  }
-];
+import portfolioData from "../Data/portfolioData"
 
 export const Portfolio = () => {
   const [filter, setFilter] = useState('all');
   const filteredProjects = filter === 'all' 
-    ? mockProjects 
-    : mockProjects.filter(p => p.category === filter);
+    ? portfolioData.projects 
+    : portfolioData.projects.filter(p => p.category === filter);
 
   const categories = ['all', 'web design', 'web development'];
 
