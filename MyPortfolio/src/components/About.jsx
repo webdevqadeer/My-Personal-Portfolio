@@ -30,13 +30,14 @@ export const About = () => {
         <p className="text-base sm:text-lg font-semibold text-white">
           Welcome to My Portfolio!
         </p>
-        <p className="text-base sm:text-md font-semibold text-white">CS Engineer || Web Developer || 1+ Year of Industry Experience || 100% Client Satisfaction</p>
-        <p className="leading-7 sm:leading-8">
-          I am a <span className="text-white text:sm font-semibold">CS Graduate</span> and professional <span className="text-white text:sm font-semibold">full-stack developer</span> with over <span className="text-white text:sm font-semibold">1 Year</span> of industry experience.As an experienced <span className="text-[#ffdb70] text:md font-semibold">MERN Stack developer</span>, I specialize in both front-end and back-end development using <span className="text-white text-sm font-semibold">Node.js, MongoDB, Express, Next.js, HTML5, CSS3, Tailwind, Bootstrap and React.js</span>.
+        <p className="text-sm font-semibold text-white"> CS Engineer || Full Stack Web Developer || 1+ Year of Industry Experience || 100% Client Satisfaction</p>
+        <p className="leading-7 sm:leading-6 text-xs">
+          I am a <span className="text-white text:sm font-semibold">CS Graduate</span> and professional <span className="text-white text:sm font-semibold">full-stack developer</span> with over <span className="text-white text:sm font-semibold">1 Year</span> of industry experience.As an experienced <span className="text-[#ffdb70] text:sm font-semibold">MERN Stack developer</span>, I specialize in both front-end and back-end development using <span className="text-white text-xs font-semibold">Node.js, MongoDB, Express, Next.js, HTML5, CSS3, Tailwind, Bootstrap and React.js</span>.
         </p>
-        <p className="leading-7 sm:leading-8">
+        <p className="leading-6 sm:leading-6 text-xs">
           After completing my graduation, I began my professional career at <span className="text-[#ffdb70] text:md font-semibold">Zapta Technologies, Lahore</span>, where I developed scalable applications and improved user experiences. I excel in team collaboration, quick learning, and problem-solving, consistently contributing to better project outcomes. With strong skills in modern programming languages, frontend frameworks, and project management, I am dedicated to delivering innovative solutions and driving technological growth. I am currently working at <span className="text-[#ffdb70] text:md font-semibold">QTO House, Lahore.</span>
         </p>
+        <p className='text-sm'><b>My goal is not only to develop your website but also to add a unique touch to your website, ensuring it is visually appealing, user-friendly, and attractive.</b></p>
       </section>
 
       {/* Services Section */}
@@ -57,7 +58,7 @@ export const About = () => {
                 <h4 className="text-white text-base sm:text-lg font-medium mb-2 sm:mb-3">
                   {service.title}
                 </h4>
-                <p className="text-[#d6d6d6] text-sm sm:text-base leading-relaxed">
+                <p className="text-[#d6d6d6] text-xs  leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -88,7 +89,7 @@ export const About = () => {
                 setSelectedTestimonial(testimonial);
                 setModalActive(true);
               }}
-              className="relative bg-[#2b2b2c] border border-[#383838] p-5 sm:p-6 pt-14 sm:pt-16 rounded-xl cursor-pointer hover:border-[#4a4a4a] transition-all w-[85%] sm:w-[calc(50%-12px)] snap-start flex-shrink-0"
+              className="relative bg-[#2b2b2c] border border-[#383838] p-5 sm:p-6 pt-14 sm:pt-12 rounded-xl cursor-pointer hover:border-[#4a4a4a] transition-all w-[85%] sm:w-[calc(50%-12px)] snap-start flex-shrink-0"
             >
               <figure className="absolute top-0 left-4 sm:left-6 transform -translate-y-1/2 bg-gradient-to-br from-[#505050] to-[#3a3a3a] rounded-xl w-16 h-16 p-2 sm:w-20 sm:h-20 overflow-hidden shadow-xl border-4 border-[#1e1e1f]">
                 <img
@@ -102,7 +103,7 @@ export const About = () => {
                 {testimonial.name}
               </h4>
 
-              <p className="text-[#b8b8b8] text-xs sm:text-sm leading-relaxed line-clamp-3">
+              <p className="text-[#b8b8b8] text-xs  leading-relaxed line-clamp-3">
                 {testimonial.text}
               </p>
             </div>

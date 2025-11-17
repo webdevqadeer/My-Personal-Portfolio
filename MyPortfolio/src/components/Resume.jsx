@@ -14,7 +14,7 @@ export const Resume = () => {
 
       {/* Education Section */}
       <section className="mb-12 sm:mb-16 ">
-        <div className="flex items-center gap-3 sm:gap-4 mb-8 ">
+        <div className="flex items-center gap-3 sm:gap-4 mb-2 ">
           <div className="bg-gradient-to-br from-[#404040] to-[#1e1e1f] w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-[#ffdb70] flex-shrink-0">
             <BookOpen size={18} className="sm:hidden" />
             <BookOpen size={20} className="hidden sm:block" />
@@ -24,24 +24,23 @@ export const Resume = () => {
 
         <ol className="relative ml-4">
           {/* Vertical timeline line */}
-          <div className="absolute left-0 top-2 bottom-0 w-0.5 bg-[#383838]"></div>
+          <div className="absolute left-0 top-5 bottom-0 w-0.5 bg-[#383838]"></div>
 
           {portfolioData.education.map((edu, index) => (
-            <li key={index} className="relative pl-8 sm:pl-10 lg:pl-12">
+            <li key={index} className="relative pl-8 sm:pl-12 ">
               {/* Timeline dot */}
-              <div className="absolute left-0 top-2 w-4 h-4 bg-[#ffdb70] rounded-full border-4 border-[#1e1e1f] transform -translate-x-[7px]"></div>
+              <div className="absolute left-0 top-5 w-4 h-4 bg-[#ffdb70] rounded-full border-4 border-[#1e1e1f] transform -translate-x-[7px]"></div>
 
               {/* Institution + Period on one line */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                <h4 className="text-white text-base sm:text-lg lg:text-xl font-medium leading-snug">
+                <h4 className="text-white text-base font-medium leading-relaxed mt-4">
                   {edu.institution}
                 </h4>
-                <span className="text-[#e5c368] text-xs sm:text-sm lg:text-base font-medium">
+                <span className="text-[#e5c368] text-xs mt-4">
                   {edu.period}
                 </span>
               </div>
-
-              <p className="text-[#d6d6d6] text-sm sm:text-base leading-relaxed mt-3 sm:mt-4">
+              <p className="text-[#d6d6d6] text-xs leading-relaxed ">
                 {edu.description}
               </p>
             </li>
@@ -53,7 +52,7 @@ export const Resume = () => {
 
       {/* Experience Section */}
       <section className="mb-12 sm:mb-10 ">
-        <div className="flex items-center gap-3 sm:gap-4 mb-8 ">
+        <div className="flex items-center gap-3 sm:gap-4 mb-4 ">
           <div className="bg-gradient-to-br from-[#404040] to-[#1e1e1f] w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-[#ffdb70] flex-shrink-0">
             <Briefcase size={18} className="sm:hidden" />
             <Briefcase size={20} className="hidden sm:block" />
@@ -61,7 +60,7 @@ export const Resume = () => {
           <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-medium">Experience</h3>
         </div>
 
-        <ol className="relative ml-4">
+        <ol className="relative ml-6">
           <div className="absolute left-0 top-2 bottom-0 w-0.5 bg-[#383838]"></div>
 
           {portfolioData.experience.map((exp, index) => (
@@ -70,22 +69,22 @@ export const Resume = () => {
 
               {/* Title + Period on one line */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                <h4 className="text-white text-base sm:text-lg lg:text-xl font-medium leading-snug">
+                <h4 className="text-white text-base font-medium leading-relaxed">
                   {exp.title}
                 </h4>
-                <span className="text-[#e5c368] text-xs sm:text-sm lg:text-base font-medium">
+                <span className="text-[#e5c368] text-xs font-medium">
                   {exp.period}
                 </span>
               </div>
 
               {/* Location (kept same style) */}
               {exp.location && (
-                <span className="text-[#e5c368] text-xs sm:text-sm lg:text-base mb-3 sm:mb-4 block font-medium">
+                <span className="text-[#e5c368] text-xs  mb-3 sm:mb-4 block font-medium">
                   {exp.location}
                 </span>
               )}
 
-              <p className="text-[#d6d6d6] text-sm sm:text-base leading-relaxed">
+              <p className="text-[#d6d6d6] text-xs leading-relaxed mb-4">
                 {exp.description}
               </p>
             </li>
