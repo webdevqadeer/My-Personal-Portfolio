@@ -23,8 +23,8 @@ import hoobankProject from "./hoobank project.png";
 import editAndCraft from "./edit and craft.png";
 import dp1 from "./dp1.png";
 
-//Certificates Photo
-// import uiux from "./uiux.png"
+// Certificates Photo
+import frontend from "./frontend.PNG"
 // import foundationuiux from "./foundationuiux.png"
 // import introjavascript from "./introJavascript.png"
 // import frontend from "./frontend.png"
@@ -53,7 +53,7 @@ export {
   editAndCraft,
   dp1,
 
-  // uiux,
+  frontend,
   // foundationuiux,
   // frontend,
   // introjavascript,
