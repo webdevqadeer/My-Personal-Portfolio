@@ -177,21 +177,21 @@ Responsibilities:
       title: "Javascript",
       issuer: "Coursera",
       date: "Aug 2025",
-      image: Img.frontend,
+      image: Img.javascriptcertificate,
       credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/NDME2P535RKY"
     },
     {
       title: "Designing (UI/UX)",
       issuer: "Coursera",
       date: "Feb 2024",
-      image: Img.uiux,
+      image: Img.uiuxcertificate1,
       credentialUrl: "https://coursera.org/verify/Y7UGE8T6RBR8"
     },
     {
       title: "Foundations of (UX) Design",
       issuer: "Coursera",
       date: "Mar 2024",
-      image: Img.foundationuiux,
+      image: Img.uiuxcertificate2,
       credentialUrl: "https://coursera.org/verify/XX8UMMVJEWLS"
     }
   ]
