@@ -25,9 +25,9 @@ import dp1 from "./dp1.png";
 
 // Certificates Photo
 import frontend from "./frontend.PNG"
-// import foundationuiux from "./foundationuiux.png"
-// import introjavascript from "./introJavascript.png"
-// import frontend from "./frontend.png"
+import foundationuiux from "./foundationuiux.png"
+import uiuxcertificate1 from "./javascript-certificate.PNG"
+import uiuxcertificate2 from "./uiux-certificate2.PNG"
 
 // Export all together
 export {
@@ -54,7 +54,7 @@ export {
   dp1,
 
   frontend,
-  // foundationuiux,
-  // frontend,
-  // introjavascript,
+  foundationuiux,
+  uiuxcertificate1,
+  uiuxcertificate2
 };
