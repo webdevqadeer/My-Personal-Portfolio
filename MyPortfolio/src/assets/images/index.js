@@ -29,7 +29,7 @@ import javascriptcertificate from "./javascript-certificate.PNG"
 import uiuxcertificate2 from "./uiux-certificate2.PNG"
 import uiuxcertificate1 from "./uiux-certificate1.PNG"
 
-// Export all together
+// Export all togetherr
 export {
   avatar1,
   avatar2,
