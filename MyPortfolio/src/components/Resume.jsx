@@ -40,7 +40,7 @@ export const Resume = () => {
                   {edu.period}
                 </span>
               </div>
-              <p className="text-[#d6d6d6] text-xs leading-relaxed ">
+              <p className="text-white text-base md:text-[#d6d6d6] md:text-sm lg:text-base md:leading-relaxed leading-relaxed">
                 {edu.description}
               </p>
             </li>
@@ -84,7 +84,7 @@ export const Resume = () => {
                 </span>
               )}
 
-              <p className="text-[#d6d6d6] text-xs leading-relaxed mb-4">
+              <p className="text-white text-base md:text-[#d6d6d6] md:text-sm lg:text-base md:leading-relaxed leading-relaxed mb-4">
                 {exp.description}
               </p>
             </li>
@@ -112,11 +112,11 @@ export const Resume = () => {
                   <img src={skill.icon} alt={skill.name} className="w-8 h-8 object-contain" />
                 </div>
 
-                <h5 className="text-white text-sm sm:text-base font-medium flex-1">
+                <h5 className="text-white text-base sm:text-base lg:text-lg font-medium flex-1">
                   {skill.name}
                 </h5>
 
-                <data className="text-[#d6d6d6] text-xs sm:text-sm font-medium">
+                <data className="text-[#d6d6d6] text-xs sm:text-sm lg:text-base font-medium">
                   {skill.percentage}%
                 </data>
               </div>

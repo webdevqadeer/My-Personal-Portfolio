@@ -26,15 +26,15 @@ export const Navbar = ({ activePage, setActivePage }) => {
       </nav>
 
       {/* Mobile Bottom Navbar */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-[#1e1e1f] border-t border-[#383838] rounded-t-3xl shadow-[0_-2px_10px_rgba(0,0,0,0.4)] py-3 flex justify-around items-center  z-50">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-[#1e1e1f] border-t border-[#383838] rounded-t-3xl shadow-[0_-2px_10px_rgba(0,0,0,0.4)] py-3 flex justify-around items-center z-50">
         {pages.map((page) => (
           <button
             key={page}
             onClick={() => setActivePage(page.toLowerCase())}
-            className={` text-[12px]   transition-colors ${
+            className={`text-sm md:text-[12px] transition-colors ${
               activePage === page.toLowerCase()
                 ? "text-[#ffdb70]"
-                : "text-[#d6d6d6] hover:text-[#ffdb70]"
+                : "text-white md:text-[#d6d6d6] md:hover:text-[#ffdb70] hover:text-[#ffdb70]"
             }`}
           >
             {page}

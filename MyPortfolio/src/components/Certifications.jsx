@@ -41,9 +41,9 @@ export const Certifications = () => {
 
                 {/* Issuer and Date */}
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4 text-base">
-                  <p className="text-[#ffdb70] text-[18px]">{cert.issuer}</p>
+                  <p className="text-white text-base md:text-[#ffdb70] md:text-base lg:text-lg">{cert.issuer}</p>
                   <span className="text-[#808080]">•</span>
-                  <p className="text-[#d6d6d6] text-[18px]">{cert.date}</p>
+                  <p className="text-white text-base md:text-[#d6d6d6] md:text-base lg:text-lg">{cert.date}</p>
                   <a
                     href={cert.credentialUrl}
                     className="inline-flex items-center gap-2 text-[#ffdb70] text-sm font-medium hover:text-[#f5c842] transition-all duration-200 group/link"
