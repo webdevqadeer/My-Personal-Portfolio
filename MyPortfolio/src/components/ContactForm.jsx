@@ -28,7 +28,6 @@ export const Contact = () => {
 
       <section>
         <h3 className="text-white text-xl font-medium mb-5">Contact Form</h3>
-        <p className="text-white text-base md:text-[#d6d6d6] md:text-base lg:text-lg">No projects found in this category.</p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -38,7 +37,7 @@ export const Contact = () => {
               placeholder="Full name"
               value={formData.fullname}
               onChange={handleChange}
-              className="bg-transparent border border-[#383838] rounded-2xl px-5 py-4 text-white placeholder:text-[#d6d6d6] focus:border-[#ffdb70] outline-none"
+              className="bg-transparent border border-[#383838] rounded-xl px-5 py-2 text-white placeholder:text-[#d6d6d6] focus:border-[#ffdb70] outline-none"
               required
             />
             <input
@@ -47,7 +46,7 @@ export const Contact = () => {
               placeholder="Email address"
               value={formData.email}
               onChange={handleChange}
-              className="bg-transparent border border-[#383838] rounded-2xl px-5 py-4 text-white placeholder:text-[#d6d6d6] focus:border-[#ffdb70] outline-none"
+              className="bg-transparent border border-[#383838] rounded-xl px-5 py-2 text-white placeholder:text-[#d6d6d6] focus:border-[#ffdb70] outline-none"
               required
             />
           </div>

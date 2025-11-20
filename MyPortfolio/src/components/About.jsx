@@ -51,9 +51,6 @@ export const About = () => {
               key={index}
               className="relative bg-gradient-to-br from-[#404040] to-transparent p-5 sm:p-6 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
             >
-              <div className="text-3xl sm:text-4xl mb-2 sm:mb-4 text-center md:text-left">
-                {service.icon}
-              </div>
               <div className="text-center md:text-left">
                 <h4 className="text-white text-base sm:text-lg font-medium mb-2 sm:mb-3">
                   {service.title}

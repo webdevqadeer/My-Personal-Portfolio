@@ -18,7 +18,7 @@ const portfolioData = {
 
   services: [
     {
-      icon: "🎨",
+      icon: Img.webdesign,
       title: "Website Development",
       description:
         "Building responsive, scalable, and high-performance user interfaces using React.js, JavaScript, Tailwind CSS, and modern web technologies.",
@@ -33,19 +33,14 @@ const portfolioData = {
 
   testimonials: [
     {
-      name: "Daniel Lewis",
-      avatar: Img.avatar1,
-      text: "Abdul Qadeer was hired to create a corporate identity. We were very pleased with the work done."
+      name: "Zapta Technologies Lahore ",
+      avatar: Img.zapta,
+      text: "Abdul Qadeer performed exceptionally well during his React.js internship at Zapat Technologies. He showed strong skills in frontend development, UI design, and responsive layouts. He completed tasks on time and worked professionally with the team."
     },
     {
-      name: "Jessica Miller",
-      avatar: Img.avatar4,
-      text: "We hired Abdul Qadeer to design a Figma design for our brand website landing page."
-    },
-    {
-      name: "Emily Evans",
-      avatar: Img.avatar2,
-      text: "Abdul Qadeer was given a task to solve an error in our React.js project."
+      name: "QTO House Lahore",
+      avatar: Img.qtohouse,
+      text: "During his internship, Abdul Qadeer proved to be a dedicated and skilled React.js frontend developer. He quickly learned project requirements and delivered clean, efficient code. His positive attitude and teamwork were highly appreciated."
     },
     {
       name: "Henry William",
@@ -100,10 +95,12 @@ Responsibilities:
   ],
 
   skills: [
+    { name: "Module Federation Technique", percentage: 100, icon: Img.react },
     { name: "HTML", percentage: 100, icon: Img.html },
     { name: "CSS", percentage: 95, icon: Img.css },
     { name: "JavaScript", percentage: 85, icon: Img.javascript },
     { name: "React.js", percentage: 95, icon: Img.react },
+    { name: "Redux/Toolkit", percentage: 95, icon: Img.react },
     { name: "Tailwind CSS", percentage: 95, icon: Img.tailwind },
     { name: "Bootstrap", percentage: 95, icon: Img.bootstrap },
     { name: "MongoDB", percentage: 90, icon: Img.mongodb },
@@ -148,19 +145,19 @@ Responsibilities:
     {
       title: "GMHS Minchinabad",
       category: "web development",
-      image: Img.businessweb,
+      image: Img.gmh,
       link: "https://gmhs-minchinabad.vercel.app",
     },
     {
       title: "Chakifaiq Website",
       category: "web development",
-      image: Img.businessweb,
+      image: Img.chakkifaiq,
       link: "https://chakifaiq.vercel.app",
     },
     {
       title: "Asset Management System — Zapta",
       category: "web development",
-      image: Img.businessweb,
+      image: Img.asset,
       link: "https://asset-management-zapta-unxf.vercel.app",
     },
   ],
@@ -193,6 +190,12 @@ Responsibilities:
       date: "Mar 2024",
       image: Img.uiuxcertificate2,
       credentialUrl: "https://coursera.org/verify/XX8UMMVJEWLS"
+    },
+    {
+      title: "Frontend Development",
+      issuer: "Zapta Technologies Lahore",
+      date: "Agus 2026",
+      image: Img.zaptacertificate,
     }
   ]
 };

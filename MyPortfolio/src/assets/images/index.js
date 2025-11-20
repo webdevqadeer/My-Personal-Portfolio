@@ -28,7 +28,13 @@ import frontend from "./frontend.PNG"
 import javascriptcertificate from "./javascript-certificate.PNG"
 import uiuxcertificate2 from "./uiux-certificate2.PNG"
 import uiuxcertificate1 from "./uiux-certificate1.PNG"
-
+import zaptacertificate from "./zaptacertificate.jpeg"
+import zapta from "./zapta.jpeg"
+import qtohouse from "./qtohouse.jpeg"
+import gmh from "./gmh.jpeg"
+import chakkifaiq from "./chakkifaiq.jpeg"
+import asset from "./asset.PNG"
+import webdesign from "./web-design.png"
 // Export all togetherr
 export {
   avatar1,
@@ -56,5 +62,13 @@ export {
   frontend,
   javascriptcertificate,
   uiuxcertificate2,
-  uiuxcertificate1
+  uiuxcertificate1,
+  zaptacertificate,
+  zapta,
+  qtohouse,
+  gmh,
+  chakkifaiq,
+  asset,
+  webdesign 
+
 };
