@@ -44,8 +44,8 @@ export const Sidebar = ({ isActive, toggleSidebar }) => {
             <img src={personalInfo.avatar} alt={personalInfo.name} className="w-full h-full object-cover" />
           </figure>
 
-          <div className="flex-1 text-center min-w-0">
-            <h1 className="text-white font-semibold mb-1 truncate text-[1rem] sm:text-base md:text-lg">
+          <div className="flex-1 min-w-0">
+            <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl font-semibold mb-1 truncate ">
               {personalInfo.name}
             </h1>
             <p className="bg-[#2b2b2c] text-white px-2 py-1 rounded-lg font-medium shadow-md inline-block truncate
