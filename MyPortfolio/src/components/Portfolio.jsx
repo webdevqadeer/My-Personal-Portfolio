@@ -20,13 +20,13 @@ export const Portfolio = () => {
 
       {/* Filter Buttons */}
       <nav className="mb-10">
-        <ul className="flex flex-wrap gap-1 sm:gap-4">
+        <ul className="flex flex-wrap gap-4 sm:gap-4">
           {categories.map((cat) => (
             <li key={cat}>
               <button 
                 onClick={() => setFilter(cat)} 
                 className={`
-                  text-base sm:text-base capitalize font-semibold   rounded-xl
+                  text-base sm:text-base md:text-sm lg:text-base capitalize font-semibold rounded-xl
                   transition-all duration-300 relative
                   ${filter === cat 
                     ? 'text-[#ffdb70]' 
@@ -101,7 +101,7 @@ export const Portfolio = () => {
       {/* Empty State */}
       {filteredProjects.length === 0 && (
         <div className="text-center py-16">
-          <p className="text-[#d6d6d6] text-lg">No projects found in this category.</p>
+          <p className="text-white text-base md:text-[#d6d6d6] md:text-base lg:text-lg">No projects found in this category.</p>
         </div>
       )}
 

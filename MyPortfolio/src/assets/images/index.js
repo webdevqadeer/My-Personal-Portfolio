@@ -23,13 +23,19 @@ import hoobankProject from "./hoobank project.png";
 import editAndCraft from "./edit and craft.png";
 import dp1 from "./dp1.png";
 
-//Certificates Cover Photo
-import designuiux from "./designuiux.png"
-import foundationuiux from "./foundationuiux.png"
-import introjavascript from "./introJavascript.png"
-import frontend from "./frontend.png"
-
-// Export all together
+// Certificates Photo
+import frontend from "./frontend.PNG"
+import javascriptcertificate from "./javascript-certificate.PNG"
+import uiuxcertificate2 from "./uiux-certificate2.PNG"
+import uiuxcertificate1 from "./uiux-certificate1.PNG"
+import zaptacertificate from "./zaptacertificate.jpeg"
+import zapta from "./zapta.jpeg"
+import qtohouse from "./qtohouse.jpeg"
+import gmh from "./gmh.jpeg"
+import chakkifaiq from "./chakkifaiq.jpeg"
+import asset from "./asset.PNG"
+import webdesign from "./web-design.png"
+// Export all togetherr
 export {
   avatar1,
   avatar2,
@@ -53,8 +59,16 @@ export {
   editAndCraft,
   dp1,
 
-  designuiux,
-  foundationuiux,
   frontend,
-  introjavascript,
+  javascriptcertificate,
+  uiuxcertificate2,
+  uiuxcertificate1,
+  zaptacertificate,
+  zapta,
+  qtohouse,
+  gmh,
+  chakkifaiq,
+  asset,
+  webdesign 
+
 };

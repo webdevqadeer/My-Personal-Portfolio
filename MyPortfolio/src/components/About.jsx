@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { X } from 'lucide-react';
 import portfolioData from "../Data/portfolioData"
 
-export const About = ()=> {
+export const About = () => {
   const [modalActive, setModalActive] = useState(false);
   const [selectedTestimonial, setSelectedTestimonial] = useState(null);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -27,15 +27,17 @@ export const About = ()=> {
 
       {/* Introduction Section */}
       <section className="text-[#d6d6d6] text-sm sm:text-base leading-relaxed space-y-4 mb-12 sm:mb-16 md:mb-6">
-        <p className="text-base sm:text-lg font-semibold text-white">
+        <p className="text-white text-base md:text-base lg:text-lg font-semibold">
           Welcome to My Portfolio!
         </p>
-        <p className="leading-7 sm:leading-8">
-          I am a professional <strong className="text-white">full-stack developer</strong> with over <strong className="text-white">1 Year</strong> of industry experience.
+        <p className="text-white text-base md:text-sm font-semibold"> CS Engineer || Full Stack Web Developer || 1+ Year of Industry Experience || 100% Client Satisfaction</p>
+        <p className="text-white text-base leading-7 md:text-[#d6d6d6] md:text-sm lg:text-base md:leading-7 lg:leading-relaxed">
+          I am a <span className="text-white text:sm font-semibold">CS Graduate</span> and professional <span className="text-white text:sm font-semibold">full-stack developer</span> with over <span className="text-white text:sm font-semibold">1 Year</span> of industry experience.As an experienced <span className="text-[#ffdb70] text:sm font-semibold">MERN Stack developer</span>, I specialize in both front-end and back-end development using <span className="text-white text-xs font-semibold">Node.js, MongoDB, Express, Next.js, HTML5, CSS3, Tailwind, Bootstrap and React.js</span>.
         </p>
-        <p className="leading-7 sm:leading-8">
-          As an experienced <strong className="text-white">MERN Stack developer</strong>, I specialize in both front-end and back-end development using <strong className="text-[#ffdb70]">Node.js, MongoDB, Express, Next.js, HTML5, CSS3, Tailwind, Bootstrap and React.js</strong>.
+        <p className="text-white text-base leading-7 md:text-[#d6d6d6] md:text-sm lg:text-base lg:leading-relaxed">
+          After completing my graduation, I began my professional career at <span className="text-[#ffdb70] text:md font-semibold">Zapta Technologies, Lahore</span>, where I developed scalable applications and improved user experiences. I excel in team collaboration, quick learning, and problem-solving, consistently contributing to better project outcomes. With strong skills in modern programming languages, frontend frameworks, and project management, I am dedicated to delivering innovative solutions and driving technological growth. I am currently working at <span className="text-[#ffdb70] text:md font-semibold">QTO House, Lahore.</span>
         </p>
+        <p className="text-white text-base md:text-sm font-semibold">My goal is not only to develop your website but also to add a unique touch to your website, ensuring it is visually appealing, user-friendly, and attractive.</p>
       </section>
 
       {/* Services Section */}
@@ -45,18 +47,15 @@ export const About = ()=> {
         </h3>
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 lg:gap-6">
           {portfolioData.services.map((service, index) => (
-            <li 
-              key={index} 
+            <li
+              key={index}
               className="relative bg-gradient-to-br from-[#404040] to-transparent p-5 sm:p-6 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
             >
-              <div className="text-3xl sm:text-4xl mb-2 sm:mb-4 text-center md:text-left">
-                {service.icon}
-              </div>
               <div className="text-center md:text-left">
                 <h4 className="text-white text-base sm:text-lg font-medium mb-2 sm:mb-3">
                   {service.title}
                 </h4>
-                <p className="text-[#d6d6d6] text-sm sm:text-base leading-relaxed">
+                <p className="text-white text-base md:text-[#d6d6d6] md:text-sm lg:text-base md:leading-relaxed leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -87,7 +86,7 @@ export const About = ()=> {
                 setSelectedTestimonial(testimonial);
                 setModalActive(true);
               }}
-              className="relative bg-[#2b2b2c] border border-[#383838] p-5 sm:p-6 pt-14 sm:pt-16 rounded-xl cursor-pointer hover:border-[#4a4a4a] transition-all w-[85%] sm:w-[calc(50%-12px)] snap-start flex-shrink-0"
+              className="relative bg-[#2b2b2c] border border-[#383838] p-5 sm:p-6 pt-14 sm:pt-12 rounded-xl cursor-pointer hover:border-[#4a4a4a] transition-all w-[85%] sm:w-[calc(50%-12px)] snap-start flex-shrink-0"
             >
               <figure className="absolute top-0 left-4 sm:left-6 transform -translate-y-1/2 bg-gradient-to-br from-[#505050] to-[#3a3a3a] rounded-xl w-16 h-16 p-2 sm:w-20 sm:h-20 overflow-hidden shadow-xl border-4 border-[#1e1e1f]">
                 <img
@@ -101,7 +100,7 @@ export const About = ()=> {
                 {testimonial.name}
               </h4>
 
-              <p className="text-[#b8b8b8] text-xs sm:text-sm leading-relaxed line-clamp-3">
+              <p className="text-white text-base md:text-[#b8b8b8] md:text-sm lg:text-base md:leading-relaxed leading-relaxed line-clamp-3">
                 {testimonial.text}
               </p>
             </div>
@@ -154,7 +153,7 @@ export const About = ()=> {
                 <h3 className="text-white text-xl sm:text-2xl font-medium mb-3 sm:mb-4">
                   {selectedTestimonial?.name}
                 </h3>
-                <p className="text-[#b8b8b8] text-sm sm:text-base leading-relaxed">
+                <p className="text-white text-base md:text-[#b8b8b8] md:text-sm lg:text-base leading-relaxed">
                   {selectedTestimonial?.text}
                 </p>
               </div>

@@ -37,7 +37,7 @@ export const Contact = () => {
               placeholder="Full name"
               value={formData.fullname}
               onChange={handleChange}
-              className="bg-transparent border border-[#383838] rounded-2xl px-5 py-4 text-white placeholder:text-[#d6d6d6] focus:border-[#ffdb70] outline-none"
+              className="bg-transparent border border-[#383838] rounded-xl px-5 py-2 text-white placeholder:text-[#d6d6d6] focus:border-[#ffdb70] outline-none"
               required
             />
             <input
@@ -46,7 +46,7 @@ export const Contact = () => {
               placeholder="Email address"
               value={formData.email}
               onChange={handleChange}
-              className="bg-transparent border border-[#383838] rounded-2xl px-5 py-4 text-white placeholder:text-[#d6d6d6] focus:border-[#ffdb70] outline-none"
+              className="bg-transparent border border-[#383838] rounded-xl px-5 py-2 text-white placeholder:text-[#d6d6d6] focus:border-[#ffdb70] outline-none"
               required
             />
           </div>
